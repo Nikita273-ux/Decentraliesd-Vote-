@@ -51,13 +51,13 @@ contract Storage {
     function RegisterVoter(uint256 _id,string memory _fname, string memory _lname, uint8 _age) public{
        
         voterCounter++;
-         Voter memory vot;
-         vot.id      = voterCounter; 
-         vot.name    = _fname;
-         vot.name    = _lname;
-         vot.age     = _age;
-         vot.vadd    = msg.sender;
-         vot.isVoter = true;
+         Voter memory vote;
+         vote.id      = voterCounter; 
+         vote.name    = _fname;
+         vote.name    = _lname;
+         vote.age     = _age;
+         vote.vadd    = msg.sender;
+         vote.isVoter = true;
          voter[msg.sender] = vote;
         voter.status = VoterStatus.unverified;
 
