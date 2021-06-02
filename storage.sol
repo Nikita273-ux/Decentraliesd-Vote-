@@ -46,6 +46,12 @@ contract Storage {
         _;
     }
     
+     modifier onlyVerifiedVoters {
+        Voter storage voter = voters[msg.sender];
+        require(voter.status == VoterStatus.verified);
+        _;
+    }
+    
     
       
     function RegisterVoter(uint256 _id,string memory _fname, string memory _lname, uint8 _age) public{
