@@ -2,7 +2,7 @@ pragma solidity 0.8.0;
 
 contract Storage {
     
-    enum VoterStatus {unverified, verified}
+   // enum VoterStatus {unverified, verified}
      
     struct Voter{
         uint256 id;
@@ -49,7 +49,7 @@ contract Storage {
     }
 
      modifier registered{
-      require(msg.sender != candidate[msg.sender].cadd,"try another address ");  
+      require(msg.sender != candidate[msg.sender].daddress,"try another address ");  
       constructor (address _controller) {
         controller = _controller;
     }
